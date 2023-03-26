@@ -1,8 +1,7 @@
 # tic-tac-toe-ai
 
-Hy this is simple tic tac toe ai project 
-Iam trying to add a play with friend option 
-any one can contribute code and correct the code or use the code in your project 
-
+Hi this is a simple tic tac toe project
+I am trying to add a 'play with friend' option
+Anyone can contribute code, fix code, and use code in your project
 
 thankyou
