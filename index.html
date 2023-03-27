@@ -18,14 +18,16 @@
   <body>
     <div class="container">
       <h1 id="player">Tic-Tac-Toe</h1>
-      <button id="resetbtn" class="reset">reset</button>
-      <div class="form-box">
+      <button id="resetbtn" class="reset">New Game</button>
+      <!-- <div class="form-box">
         <div class="button-box">
           <div id="btn"></div>
-          <button type="button" class="toggle-btn" onclick="leftClick()">Computer</button>
-          <button type="button" class="toggle-btn" onclick="rightClick()">Friend</button>
+          <button type="button" class="toggle-btn" id="btnC" onclick="leftClick()">Computer</button>
+          <button type="button" class="toggle-btn" id="btnF" onclick="rightClick()">Friend</button>
         </div>
-      </div>
+      </div> -->
+      <div class="score"><p><span>X</span>-<span id="x">0</span>
+      , <span>Tie-</span><span id="tie">0</span> , <span>O</span>-<span id="o">0</span></p></div>
       <div id="gameboard">
         <div class="box" id="0"></div>
         <div class="box" id="1"></div>

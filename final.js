@@ -5,9 +5,9 @@ function leftClick() {
 	
 }
 
-// function rightClick() {
-// 	btn.style.left = '131px'
-// }
+function rightClick() {
+	btn.style.left = '131px'
+}
 
 
 var origBoard;
@@ -30,17 +30,8 @@ const cells = document.querySelectorAll('.box');
 // const winningMessageElement = document.getElementById('winningMessage')
 // const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 // let circleTurn
-resetbtn.addEventListener('click', reset)
- function reset(){
-	for (var i = 0; i < cells.length; i++) {
-		cells[i].classList.remove("win")
-		startGame()
-	}
-
- }
 
 startGame();
-
 function startGame() {
 	// document.querySelector(".endgame").style.display = "none";
 	origBoard = Array.from(Array(9).keys());
@@ -144,7 +135,7 @@ function minimax(newBoard, player) {
 
 	var bestMove;
 	if(player === Player2) {
-		var bestScore = -10000;
+		var bestScore = -1000;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score > bestScore) {
 				bestScore = moves[i].score;
@@ -152,7 +143,7 @@ function minimax(newBoard, player) {
 			}
 		}
 	} else {
-		var bestScore = 10000;
+		var bestScore = 1000;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score < bestScore) {
 				bestScore = moves[i].score;
@@ -163,3 +154,12 @@ function minimax(newBoard, player) {
 
 	return moves[bestMove];
 }
+
+resetbtn.addEventListener('click', reset)
+ function reset(){
+	for (var i = 0; i < cells.length; i++) {
+		cells[i].classList.remove("win")
+		cells[i].classList.remove("draw")
+	}
+	startGame()
+ }
