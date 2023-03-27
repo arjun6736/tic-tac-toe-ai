@@ -32,6 +32,11 @@ const cells = document.querySelectorAll('.box');
 // let circleTurn
 resetbtn.addEventListener('click', reset)
  function reset(){
+	for (var i = 0; i < cells.length; i++) {
+		cells[i].classList.remove("win")
+		startGame()
+	}
+
  }
 
 startGame();
